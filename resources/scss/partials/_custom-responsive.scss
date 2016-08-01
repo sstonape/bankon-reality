@@ -1,0 +1,24 @@
+@media (min-width: 1200px) {
+	.forCustomer {
+		.servicesList {
+			li {
+				width: 225px;
+			}
+		}
+	} 
+
+	.processType{
+		li{
+			&.leadProcess{
+		 		margin-left: 220px;
+			}
+			&.campaign {
+				margin-left: 110px;
+			}
+
+			&.relationship {
+				margin-left: 155px;
+			}
+		}	
+	}
+}

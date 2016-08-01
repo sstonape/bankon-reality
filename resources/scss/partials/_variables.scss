@@ -1,0 +1,85 @@
+/* reset CSS */
+body,html {
+	padding: 0 ;
+	margin: 0;
+	min-height: 100%;
+}
+ul,li {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+h1,h2,h3,h4,h5 {
+	padding: 0;
+	margin: 0;
+}
+a,a:hover,a:visited{
+	text-decoration: none
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+/* end of reset */
+
+$bodyColor: #eeeeee; 
+$grey: #666666;
+$yellow: #ffcc00;
+$black: #000000;
+$white: #fff;
+$fontMon: Montserrat;
+$fontDefault: ""Helvetica Neue", Helvetica, Arial, sans-serif"; 
+$menuFontColor: #111111;
+
+.mRegular {
+	font-family: $fontMon;
+	font-weight: 400;	
+}
+.mSemiBold {
+	font-family: $fontMon;
+	font-weight: 600;	
+}
+
+.arial {
+	font-family: $fontDefault; 	
+}
+
+h2 {
+	font-size: 30px;
+	line-height: 32px;
+}
+
+
+[class ^= "icon-"],
+[class *= "icon-"]{
+   background:url("../images/sprite.png") no-repeat;
+   display: inline-block;
+}
+.icon-down {
+	background-position: 0 0;
+	width: 11px;
+	height: 5px;
+}
+
+
+.listBgGrey{
+	margin-left: -10px;
+	li{
+		float: left;
+		font-size: 14px;
+		padding: 0 5px;
+		line-height: 24px;
+		color: $white;
+		background: $grey;
+		margin: 0 10px 10px 0;
+	}
+}
+
+.dispTable {
+	display: table;
+	width: 100%;
+
+	.tCell {
+		display: table-cell;
+	}
+}
