@@ -1,0 +1,85 @@
+<div class="wrapper row3">
+	<main id="container" class="clear">
+	<div class="article">
+	 <form name="synergyContactForm" novalidate>
+		<table width="100px" class="freecontactform">
+		<tr>
+		 <td colspan="2">
+		 <div class="freecontactformheader">Contact Us Form</div>
+		 <div class="freecontactformmessage">Fields marked with <span class="required_star"> * </span> are mandatory.</div>
+		 </td>
+		</tr>
+		<tr>
+		 <td valign="top">
+		  <label for="Full_Name" class="required">Full Name<span class="required_star"> * </span></label>
+		 </td>
+		 <td valign="top" ng-class="{error: synergyContactForm.name.$invalid}">
+		  <input type="text" name="name" id="Full_Name" ng-model="synergy.name" maxlength="80" style="width:300px" autofocus required placeholder="eg. John Doe">
+		  <span style="color:red" ng-show="synergyContactForm.name.$dirty && synergyContactForm.name.$invalid">
+  			<span ng-show="synergyContactForm.name.$error.required">Name is required.</span>
+  		  </span>
+		 </td>
+		</tr>
+		<tr>
+		 <td valign="top">
+		  <label for="Email_Address" class="required">Email Address<span class="required_star"> * </span></label>
+		 </td>
+		 <td valign="top">
+		  <input type="text" name="email" id="Email_Address" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" ng-model="synergy.email" maxlength="100" style="width:300px" required placeholder="eg. john@abc.com">
+		  <span style="color:red" ng-show="synergyContactForm.email.$dirty && synergyContactForm.email.$invalid">
+  			<span ng-show="synergyContactForm.email.$error.required">Email ID is required.</span>
+  			<span ng-show="synergyContactForm.email.$error.pattern">Invalid Email ID.</span>
+  		  </span>
+		 </td>
+		</tr>
+		<tr>
+		 <td valign="top">
+		  <label for="Telephone_Number" class="required">Contact Number</label>
+		 </td>
+		 <td valign="top">
+		 <div ng-hide="synergy.countryCode" style="float: left;" ng-show="toggleCode">
+			  <select style="width:300px" ng-model="synergy.countryCode" ng-options="country.name for country in countryCodes | orderBy:'name' " ng-change="onChangeCountry(synergy.countryCode)">
+	    			<option value="">Select Country</option>
+			  </select>
+		 </div>
+		 <div ng-show="synergy.countryCode" style="float: left; padding-right: 10px">
+			  <input class="textDisableClass" type="text" value="{{synergy.countryCode.code}}" readonly style="width:80px" ng-model="synergy.countryCode.code">
+			  <a href="#" ng-init="toggleCode=false" ng-click="toggleCode= !toggleCode; synergy.countryCode='' "><span style="color: black;">Change</span></a>
+		 </div>
+		 <div ng-show="synergy.countryCode">
+			  <input type="text" name="number" id="Telephone_Number" ng-pattern="/(^[0-9]*$)/" ng-model="synergy.number" style="width:210px" placeholder="Contact Number">
+			  <span style="color:red" ng-show="synergyContactForm.number.$dirty && synergyContactForm.number.$invalid">
+	  			<span ng-show="synergyContactForm.number.$error.pattern">Invalid Number.</span>
+	  		  </span>
+	  	 </div>
+	  	 </td>
+		</tr>
+		<tr>
+		 <td valign="top">
+		  <label for="Your_Message" class="required">Your Message<span class="required_star"> * </span></label>
+		 </td>
+		 <td valign="top">
+		  <textarea style="width:300px;height:160px" name="message" ng-model="synergy.message" id="Your_Message" maxlength="2000" required placeholder="Enter your message here"></textarea>
+		  <span style="color:red" ng-show="synergyContactForm.message.$dirty && synergyContactForm.message.$invalid">
+  			<span ng-show="synergyContactForm.message.$error.required">Message is required.</span>
+  		  </span>
+		 </td>
+		</tr>
+		<tr>
+		 <td colspan="2" class="formbtn">
+		  <input type="submit" value="Submit " style="width:120px;height:40px" ng-click="getDetails(synergy)" class="btn" 
+		  ng-disabled="(!synergyContactForm.$valid && !synergy.number) || (!synergyContactForm.$valid && synergy.number)">
+		  <div class="contactUs">
+		  	<span> <b>For any queries please contact,</b><br>
+		  		<b>Email:</b> support@synergymarketresearch.com<br>
+		  		<b>Contact No:</b> +91 95276 77477
+		  	</span>
+		  </div>
+		  </td>
+		  </tr>	  
+		</table>
+		</form>
+		<div class="loader" style="display: none;"></div>
+		</div>
+    </main>
+</div>
