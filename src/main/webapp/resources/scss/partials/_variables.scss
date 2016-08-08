@@ -55,6 +55,15 @@ h2 {
    background:url("../images/sprite.png") no-repeat;
    display: inline-block;
 }
+
+[class ^= "iconL-"],
+[class *= "iconL-"]{
+   background:url("../images/location-sprite.png") no-repeat;
+   display: inline-block;
+   width: 85px;
+   height: 100px;
+}
+
 .icon-down {
 	background-position: 0 0;
 	width: 11px;
@@ -82,4 +91,101 @@ h2 {
 	.tCell {
 		display: table-cell;
 	}
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;  
+  border-bottom: 8px solid black;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;  
+  border-top: 8px solid #f00;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;  
+  border-left: 8px solid green;
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;  
+  border-right:8px solid blue; 
+}
+
+/** location icon **/
+.iconL-shivajinagar {
+	background-position: 0 0;
+}
+.iconL-deccan {
+	background-position: -85px 0;	
+}
+.iconL-yerwada {
+	background-position: -170px 0;	
+}
+.iconL-kharadi {
+	background-position: -255px 0;	
+}
+.iconL-moshi {
+	background-position: -340px 0;	
+}
+.iconL-bibwewadi {
+	background-position: -425px 0;	
+}
+.iconL-pimplenilakh {
+	background-position: -510px 0;	
+}
+.iconL-katraj {
+	background-position: 0 -100px;	
+}
+.iconL-warje {
+	background-position: -85px -100px;
+}
+.iconL-kothrud {
+	background-position: -170px -100px;
+}
+.iconL-bavdhan {
+	background-position: -255px -100px;
+}
+.iconL-bhugaon {
+	background-position: -340px -100px;	
+}
+.iconL-pirangut {
+	background-position: -425px -100px;	
+}
+.iconL-rihe {
+	background-position: -510px -100px;
+}
+.iconL-baner {
+	background-position: 0 -200px;
+}
+.iconL-balewadi {
+	background-position: -85px -200px;
+}
+.iconL-pashansus {
+	background-position: -170px -200px;
+}
+.iconL-wakad {
+	background-position: -255px -200px;
+}
+.iconL-hinjewadi {
+	background-position: -340px -200px;	
+}
+.iconL-pimplesaudagar {
+	background-position: -425px -200px;	
+}
+.iconL-shirwal {
+	background-position: -510px -200px;
 }

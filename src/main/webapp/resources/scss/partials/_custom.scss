@@ -14,6 +14,8 @@ body {
 .pageHeader {
 	margin-bottom: 10px;
 	@include transition(all 0.5s ease);	
+
+
 }
 
 .pageMenu {
@@ -29,6 +31,33 @@ body {
 			display: block;
 			padding: 10px 10px;
 			@include transition(all 0.5s ease);		
+		}
+
+		&.hasSubMenu{
+			a{
+				position: relative;
+				&:after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					display: none;
+					margin-left: -4px;					
+					@extend .arrow-up;
+					border-bottom-color: $white;				
+				}
+			}			
+
+			&:hover {
+				a {
+					&:after {
+						display: block;
+					}
+				}
+				.subMenu {
+					display: block;
+				}
+			}
 		}
 
 		.subMenu {
@@ -48,15 +77,23 @@ body {
 				padding: 10px 20px;
 			}
 		}
+		
+		.contactSubMenu{
+			width: 260px;
+			font-size: 12px;
+			line-height: 16px;
+			padding: 28px 0;
+			left: 50%;
+			margin-left: -130px;
+			text-align: center;			
+			background: $white;
 
-		&:hover {
-			a {
-				background: $white;
-			}
-			.subMenu {
-				display: block;
+			.teleContact{
+				margin-bottom: 16px;
 			}
 		}
+
+		
 	}
 }
 
@@ -105,7 +142,8 @@ body {
 .aboutSection,
 .whybankon,
 .forCustomer,
-.process {
+.process,
+.locations {
 	h2 {
 		text-align: center;		
 		text-transform: uppercase;
@@ -287,14 +325,21 @@ body {
 }
 
 .process {
-
 	.sectionData {
 		background: $white;
 		padding-bottom: 80px;
 	}
+	h2 {
+		color: $grey;
+		span {
+			&:after {
+				background: $grey;
+			}
+		}
+	}
 }
 
-.processType{
+.processType{	
 	li {
 		position: relative;
 		h2 {
@@ -340,5 +385,52 @@ body {
 				top: 80px;
 			}
 		}
+	}
+}
+
+.locations{
+	.sectionData{
+		background: $yellow;
+		padding-bottom: 65px;
+	}
+
+	h2{
+		color: $grey;
+		span {
+			&:after {
+				width: 180px;
+				margin-left: -90px;
+				background: $grey;
+			}
+		}
+	}	
+}
+
+.locationList{
+	width: 875px;
+	margin: 0 auto;
+	margin-top: -30px;
+	li {
+		float: left;
+		width: 125px;
+		text-align: center;		
+		margin-top: 30px;
+	}
+	h3 {
+		font-size: 14px;
+		line-height: 18px;
+		color: #333333;
+		margin-top: 16px;		
+	}		
+}
+
+
+.pageFooter {
+	padding: 25px 0;
+	p {
+		font-size: 14px;
+		line-height: 18px;
+		color: #999999;
+		font-weight: 600;
 	}
 }
