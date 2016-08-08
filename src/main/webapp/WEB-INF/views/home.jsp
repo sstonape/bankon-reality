@@ -6,8 +6,8 @@
 		<title>Bankon</title>
 		<meta chartset="utf-8">
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>	
-		<link rel="stylesheet" type="text/css" href="resources/layout/bootstrap.css">	
-		<link rel="stylesheet" type="text/css" href="resources/layout/main.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css">	
+		<link rel="stylesheet" type="text/css" href="resources/css/main.css">
 	</head>
 	<body>
 		<!-- page Header -->
@@ -321,7 +321,8 @@
 		<!-- end of footer -->
 
 		<script type="text/javascript" src="resources/js/vendor/jquery.min.js"></script>
-		<script type="text/javascript" src="resources/layout/custom.js"></script>
+		<script type="text/javascript" src="resources/js/vendor/html5shiv.js"></script>
+		<script type="text/javascript" src="resources/js/custom.js"></script>
 
 <%-- <!-- JAVASCRIPTS --> 
 <script src="${pageContext.request.contextPath}/resources/js/vendor/jquery.min.js"></script>
