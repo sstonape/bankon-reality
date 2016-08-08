@@ -1,3 +1,9 @@
 .gitignore~
 node_modules
 /target/
+<<<<<<< HEAD
+=======
+.classpath
+.project
+.settings/
+>>>>>>> 5565776e91b30466c12b54b8577064638c4ea864
