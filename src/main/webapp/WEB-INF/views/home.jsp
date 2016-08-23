@@ -118,6 +118,35 @@
 		</section>
 		<!-- end of why bankon -->
 
+		<!-- projects -->
+		<section class="section ourProjects" id="projects">
+			<div class="container">
+				<div class="sectionData">					
+					<h2><span>Projects</span></h2>
+
+					<ul class="clearfix projectsTypes">
+						<li class="projectTypesTile events">
+							<img src="resources/images/ongoing.png" alt="Ongoing Bankon Projects"/>
+							<div class="tileInfo">
+								<h4>Events</h4>
+								<p>More than 20 ongoing projects</p>
+								<a href="#">View All</a>
+							</div>								
+						</li>
+						<li class="projectTypesTile ongoing">							
+							<img src="resources/images/events.png" alt="Bankon Events"/>
+							<div class="tileInfo">
+								<h4>Ongoing</h4>
+								<p>More than 50 events</p>
+								<a href="#">View All</a>
+							</div>								
+						</li>
+					</ul>				
+				</div>			
+			</div>	
+		</section>
+		<!-- end projects -->
+		
 		<!-- customer -->
 		<section class="section forCustomer" id="customers">
 			<div class="container">
@@ -126,7 +155,7 @@
 					<div class="dispTable">
 						<div class="colLeft tCell">
 							<h3>Service under one roof</h3>
-							<ul class="clearfix listBgGrey">
+							<ul class="oneRoofList clearfix listBgGrey">
 								<li><span>Manage everything in one place</span></li>
 								<li><span>Take the burden of Manpower handling and manage 
 									multiple employees across teams.</span></li>
@@ -189,6 +218,7 @@
 		</section>
 		<!-- end of customer -->
 
+		<!--  process  -->
 		<section class="section process" id="process">
 			<div class="container">
 				<div class="sectionData">
@@ -212,6 +242,7 @@
 				</div>
 			</div>
 		</section>
+		<!--  end of process -->
 
 		<!-- our locations -->
 		<section class="section locations" id="location">
@@ -219,90 +250,94 @@
 				<div class="sectionData">
 					<h2><span>We have muscles in location</span></h2>
 					<ul class="locationList clearfix">
-						<li>
+						<!-- <li class="shivajinagar">
 							<span class="iconL-shivajinagar"></span>
 							<h3>Shivaji Nagar</h3>
-						</li>
-						<li>
+						</li> -->
+						<!-- <li class="deccan">
 							<span class="iconL-deccan"></span>
 							<h3>Deccan</h3>
-						</li>
-						<li>
+						</li> -->
+						<!-- <li class="yerwada">
 							<span class="iconL-yerwada"></span>
 							<h3>Yerwada</h3>
-						</li>
-						<li>
+						</li> -->
+						<li class="kharadi">
 							<span class="iconL-kharadi"></span>
 							<h3>Kharadi</h3>
 						</li>
-						<li>
+						<li class="karvenagar">
+							<span class="iconL-karvenagar"></span>
+							<h3>Karve Nagar</h3>
+						</li>
+						<li class="moshi">
 							<span class="iconL-moshi"></span>
 							<h3>Moshi</h3>
 						</li>
-						<li>
+						<li class="bibwewadi">
 							<span class="iconL-bibwewadi"></span>
 							<h3>Bibwewadi</h3>
 						</li>
-						<li>
+						<li class="pimplenilakh">
 							<span class="iconL-pimplenilakh"></span>
 							<h3>Pimple Nilakh</h3>
 						</li>
-						<li>
+						<li class="katraj">
 							<span class="iconL-katraj"></span>
 							<h3>Katraj</h3>
 						</li>
-						<li>
+						<li class="warje">
 							<span class="iconL-warje"></span>
 							<h3>Warje</h3>
 						</li>
-						<li>
+						<li class="kothrud">
 							<span class="iconL-kothrud"></span>
 							<h3>Kothrud</h3>
 						</li>
-						<li>
+						<li class="bavdhan">
 							<span class="iconL-bavdhan"></span>
 							<h3>Bavdhan</h3>
 						</li>
-						<li>
+						<li class="bhugaon">
 							<span class="iconL-bhugaon"></span>
 							<h3>Bhugaon</h3>
 						</li>
-						<li>
+						<li class="pirangut">
 							<span class="iconL-pirangut"></span>
 							<h3>Pirangut</h3>
 						</li>
-						<li>
+						<!-- <li class="rihe">
 							<span class="iconL-rihe"></span>
 							<h3>Rihe</h3>
-						</li>
-						<li>
+						</li> -->
+						<li class="baner">
 							<span class="iconL-baner"></span>
 							<h3>Baner</h3>
 						</li>
-						<li>
+						<li class="balewadi">
 							<span class="iconL-balewadi"></span>
 							<h3>Balewadi</h3>
 						</li>
-						<li>
+						<li class="pashansus">
 							<span class="iconL-pashansus"></span>
 							<h3>Pashan Sus Road</h3>
 						</li>
-						<li>
+						<li class="wakad">
 							<span class="iconL-wakad"></span>
 							<h3>Wakad</h3>
 						</li>
-						<li>
+						<li class="hinjewadi">
 							<span class="iconL-hinjewadi"></span>
 							<h3>Hinjewadi</h3>
 						</li>
-						<li>
+						<li class="pimplesaudagar">
 							<span class="iconL-pimplesaudagar"></span>
 							<h3>Pimple Saudagar</h3>
 						</li>
-						<li>
+						<!-- <li class="shirwal">
 							<span class="iconL-shirwal"></span>
 							<h3>Shirawal</h3>
-						</li>						
+						</li> -->						
 					</ul>
 				</div>
 			</div>

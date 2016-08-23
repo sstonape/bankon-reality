@@ -70,7 +70,7 @@ h2 {
   .dispTable .tCell {
     display: table-cell; }
 
-.arrow-up, .pageMenu li.hasSubMenu a:after {
+.arrow-up, .pageMenu li.hasSubMenu > a:after {
   width: 0;
   height: 0;
   border-left: 8px solid transparent;
@@ -162,6 +162,9 @@ h2 {
 .iconL-shirwal {
   background-position: -510px -200px; }
 
+.iconL-karvenagar {
+  background-position: 0 -300px; }
+
 body {
   background: #eeeeee; }
 
@@ -193,22 +196,23 @@ body {
       color: #111111;
       display: block;
       padding: 10px 10px;
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      transition: all 0.5s ease; }
-    .pageMenu li.hasSubMenu a {
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    .pageMenu li.hasSubMenu > a {
       position: relative; }
-      .pageMenu li.hasSubMenu a:after {
+      .pageMenu li.hasSubMenu > a:after {
         content: "";
         position: absolute;
-        bottom: 0;
+        bottom: -2px;
+        z-index: 110;
         left: 50%;
         display: none;
         margin-left: -4px;
         border-bottom-color: #fff; }
-    .pageMenu li.hasSubMenu:hover a:after {
+    .pageMenu li.hasSubMenu:hover > a:after {
       display: block; }
     .pageMenu li.hasSubMenu:hover .subMenu {
       display: block; }
@@ -217,6 +221,7 @@ body {
       top: 100%;
       z-index: 100;
       width: 175px;
+      border: 1px solid #000000;
       left: 0;
       display: none;
       -webkit-transition: all 0.5s ease;
@@ -228,6 +233,8 @@ body {
         background: #fff;
         display: block;
         float: none; }
+        .pageMenu li .subMenu li:hover a {
+          background: #f2f2f2; }
       .pageMenu li .subMenu a {
         padding: 10px 20px; }
     .pageMenu li .contactSubMenu {
@@ -241,6 +248,9 @@ body {
       background: #fff; }
       .pageMenu li .contactSubMenu .teleContact {
         margin-bottom: 16px; }
+  .pageMenu > ul > li:hover > a {
+    background: #111111;
+    color: #fff; }
 
 .bannerSection {
   height: 470px; }
@@ -278,7 +288,8 @@ body {
 .whybankon h2,
 .forCustomer h2,
 .process h2,
-.locations h2 {
+.locations h2,
+.ourProjects h2 {
   text-align: center;
   text-transform: uppercase;
   margin: 0 0 65px 0;
@@ -425,7 +436,7 @@ body {
 .processType li {
   position: relative; }
   .processType li h2 {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -443,26 +454,33 @@ body {
     margin-left: 60px;
     width: 380px; }
     .processType li.campaign h2 {
-      right: 0;
-      left: 0;
-      text-align: center; }
+      margin-bottom: 10px; }
   .processType li.leadProcess {
     width: 480px;
     margin-left: 160px;
     margin-top: 80px;
     margin-bottom: 40px; }
+    .processType li.leadProcess h2 {
+      left: -50px;
+      margin-bottom: 10px; }
   .processType li.relationship {
     width: 825px;
     margin: 0 auto;
     margin-left: 80px; }
     .processType li.relationship h2 {
-      top: 80px; }
+      position: absolute;
+      top: 90px; }
 
 .locations .sectionData {
-  background: #ffcc00;
-  padding-bottom: 65px; }
+  background-image: url("../images/location-bg.png");
+  background-size: cover;
+  background-color: #ffcc00;
+  padding-bottom: 65px;
+  height: 670px;
+  position: relative; }
 
 .locations h2 {
+  margin-bottom: 20px;
   color: #666666; }
   .locations h2 span:after {
     width: 180px;
@@ -472,17 +490,67 @@ body {
 .locationList {
   width: 875px;
   margin: 0 auto;
-  margin-top: -30px; }
+  position: relative; }
   .locationList li {
     float: left;
     width: 125px;
     text-align: center;
-    margin-top: 30px; }
+    position: absolute; }
   .locationList h3 {
     font-size: 14px;
     line-height: 18px;
     color: #333333;
     margin-top: 16px; }
+  .locationList .baner {
+    left: 58px; }
+  .locationList .wakad {
+    left: 190px;
+    top: 28px; }
+  .locationList .kharadi {
+    left: 335px;
+    top: 90px; }
+  .locationList .balewadi {
+    top: 172px;
+    left: 106px; }
+  .locationList .warje {
+    top: 252px;
+    left: 223px; }
+  .locationList .katraj {
+    top: 315px;
+    left: 20px; }
+  .locationList .kothrud {
+    left: 130px;
+    top: 375px; }
+  .locationList .pashansus {
+    left: 306px;
+    top: 400px; }
+  .locationList .bavdhan {
+    left: 348px;
+    top: 250px; }
+  .locationList .pimplenilakh {
+    right: 0;
+    top: 130px; }
+  .locationList .bibwewadi {
+    right: 110px;
+    top: 52px; }
+  .locationList .hinjewadi {
+    top: 30px;
+    right: 204px; }
+  .locationList .moshi {
+    right: 203px;
+    top: 182px; }
+  .locationList .pirangut {
+    top: 310px;
+    right: 100px; }
+  .locationList .pimplesaudagar {
+    top: 380px;
+    right: 20px; }
+  .locationList .bhugaon {
+    right: 255px;
+    top: 340px; }
+  .locationList .karvenagar {
+    top: 100px;
+    left: -20px; }
 
 .pageFooter {
   padding: 25px 0; }
@@ -491,6 +559,73 @@ body {
     line-height: 18px;
     color: #999999;
     font-weight: 600; }
+
+.ourProjects h2 {
+  color: #666666;
+  margin-bottom: 20px; }
+  .ourProjects h2 span:after {
+    background: #666666; }
+
+.ourProjects .sectionData {
+  background: #fff;
+  padding-bottom: 60px; }
+
+.projectsTypes {
+  width: 780px;
+  margin: 0 auto; }
+  .projectsTypes .projectTypesTile {
+    float: left;
+    margin-left: 20px;
+    width: 380px; }
+    .projectsTypes .projectTypesTile:first-child {
+      margin-left: 0; }
+
+.projectTypesTile {
+  position: relative;
+  overflow: hidden; }
+  .projectTypesTile img {
+    width: 100%;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+  .projectTypesTile h4 {
+    color: #ffcc00;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 20px; }
+  .projectTypesTile p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    min-height: 40px;
+    margin-bottom: 20px; }
+  .projectTypesTile a {
+    font-size: 12px;
+    line-height: 12px;
+    color: #ffcc00;
+    text-decoration: underline;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s ease;
+    -moz-transition: opacity 0.4s ease;
+    -ms-transition: opacity 0.4s ease;
+    -o-transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease; }
+  .projectTypesTile .tileInfo {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    z-index: 20;
+    width: 190px; }
+  .projectTypesTile:hover img {
+    -webkit-transform: scale(1.3, 1.3);
+    -moz-transform: scale(1.3, 1.3);
+    -ms-transform: scale(1.3, 1.3);
+    -o-transform: scale(1.3, 1.3);
+    transform: scale(1.3, 1.3); }
+  .projectTypesTile:hover a {
+    opacity: 1; }
 
 @media (min-width: 1200px) {
   .forCustomer .servicesList li {

@@ -14,8 +14,6 @@ body {
 .pageHeader {
 	margin-bottom: 10px;
 	@include transition(all 0.5s ease);	
-
-
 }
 
 .pageMenu {
@@ -30,16 +28,17 @@ body {
 			color: $menuFontColor;
 			display: block;
 			padding: 10px 10px;
-			@include transition(all 0.5s ease);		
+			@include transition(all 0.3s ease);		
 		}
 
 		&.hasSubMenu{
-			a{
+			> a{
 				position: relative;
 				&:after {
 					content: "";
 					position: absolute;
-					bottom: 0;
+					bottom: -2px;
+					z-index: 110;
 					left: 50%;
 					display: none;
 					margin-left: -4px;					
@@ -49,7 +48,7 @@ body {
 			}			
 
 			&:hover {
-				a {
+				> a {
 					&:after {
 						display: block;
 					}
@@ -65,6 +64,7 @@ body {
 			top: 100%;
 			z-index: 100;
 			width: 175px;
+			border: 1px solid $black;
 			left: 0;
 			display: none;
 			@include transition(all 0.5s ease);
@@ -72,10 +72,16 @@ body {
 				background: $white;
 				display: block;
 				float: none;
+				&:hover {
+					a {
+						background: #f2f2f2;
+					}
+				}
 			}
 			a{
 				padding: 10px 20px;
 			}
+
 		}
 		
 		.contactSubMenu{
@@ -91,10 +97,20 @@ body {
 			.teleContact{
 				margin-bottom: 16px;
 			}
-		}
-
-		
+		}		
 	}
+
+	> ul > li {
+		&:hover{
+
+			> a {
+				background: $menuFontColor;
+				color: $white;
+			}
+		}
+	}
+
+
 }
 
 .bannerSection{
@@ -143,7 +159,8 @@ body {
 .whybankon,
 .forCustomer,
 .process,
-.locations {
+.locations,
+.ourProjects {
 	h2 {
 		text-align: center;		
 		text-transform: uppercase;
@@ -322,6 +339,10 @@ body {
 			color: $white;
 		}
 	}
+
+	.oneRoofList{
+		margin-top: 250px;
+	}
 }
 
 .process {
@@ -343,7 +364,7 @@ body {
 	li {
 		position: relative;
 		h2 {
-			position: absolute;
+			position: relative;
 			top: 0;
 			left: 0;
 			right: 0;
@@ -365,10 +386,8 @@ body {
 			margin-left: 60px;
 			width: 380px;
 
-			h2 {
-				right: 0;
-				left: 0;
-				text-align: center;
+			h2 {				
+				margin-bottom: 10px;
 			}
 		}
 		&.leadProcess{
@@ -376,25 +395,36 @@ body {
 			margin-left: 160px;
 			margin-top: 80px;
 			margin-bottom: 40px;
+			h2 {
+				left: -50px;
+				margin-bottom: 10px;
+			}
 		}
 		&.relationship {
 			width: 825px;
 			margin: 0 auto;
 			margin-left: 80px;
 			h2 {
-				top: 80px;
+				position: absolute;
+				top: 90px;
 			}
 		}
 	}
 }
 
 .locations{
+	
 	.sectionData{
-		background: $yellow;
+		background-image: url("../images/location-bg.png");
+		background-size: cover;
+		background-color: $yellow;
 		padding-bottom: 65px;
+		height: 670px;
+		position: relative;
 	}
 
 	h2{
+		margin-bottom: 20px;
 		color: $grey;
 		span {
 			&:after {
@@ -408,20 +438,104 @@ body {
 
 .locationList{
 	width: 875px;
-	margin: 0 auto;
-	margin-top: -30px;
+	margin: 0 auto;	
+	position: relative;
 	li {
 		float: left;
 		width: 125px;
-		text-align: center;		
-		margin-top: 30px;
+		text-align: center;			
+		position: absolute;
 	}
 	h3 {
 		font-size: 14px;
 		line-height: 18px;
 		color: #333333;
 		margin-top: 16px;		
-	}		
+	}	
+
+	.baner {		
+		left: 58px;
+	}	
+
+	.wakad {
+		left: 190px;
+		top: 28px;
+	}
+
+	.kharadi {
+		left: 335px;
+		top: 90px;
+	}
+
+	.balewadi {
+		top: 172px;
+		left: 106px;
+	}
+
+	.warje {
+		top: 252px;
+		left: 223px;
+	}
+
+	.katraj {
+		top: 315px;
+		left: 20px;
+	}
+
+	.kothrud {
+		left: 130px;
+		top: 375px;
+	}
+
+	.pashansus {
+		left: 306px;
+		top: 400px;
+	}
+
+	.bavdhan {
+		left: 348px;
+		top: 250px;
+	}
+
+	.pimplenilakh {
+		right: 0;
+		top: 130px;
+	}
+
+	.bibwewadi {
+		right: 110px;
+		top: 52px;
+	}
+
+	.hinjewadi {
+		top: 30px;
+		right: 204px;
+	}
+
+	.moshi {
+		right: 203px;
+		top: 182px;
+	}
+
+	.pirangut {
+		top: 310px;
+		right: 100px;
+	}
+
+	.pimplesaudagar {
+		top: 380px;
+		right: 20px;
+	}
+
+	.bhugaon {
+		right: 255px;
+		top: 340px;
+	}
+
+	.karvenagar {
+		top: 100px;
+		left: -20px;
+	}
 }
 
 
@@ -432,5 +546,82 @@ body {
 		line-height: 18px;
 		color: #999999;
 		font-weight: 600;
+	}
+}
+
+.ourProjects{
+	h2 {
+		color: $grey;
+		margin-bottom: 20px;
+		span {
+			&:after {
+				background: $grey;
+			}
+		}
+	}
+	.sectionData {
+		background: $white;
+		padding-bottom: 60px;
+	}	
+}
+.projectsTypes{
+	width: 780px;
+	margin: 0 auto;	
+	.projectTypesTile{
+		float: left;
+		margin-left: 20px;
+		width: 380px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+.projectTypesTile {
+	position: relative;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		@include transition(all 0.4s ease);
+	}
+	h4 {
+		color: $yellow;	
+		font-size: 24px;
+		line-height: 28px;
+		margin-bottom: 20px;
+	}
+	p {
+		color: $white;
+		font-size: 18px;
+		line-height: 22px;
+		min-height: 40px;
+		margin-bottom: 20px;
+	}
+
+	a{
+		font-size: 12px;
+		line-height: 12px;
+		color: $yellow;
+		text-decoration: underline;
+		opacity: 0;
+		@include transition(opacity 0.4s ease);
+	}
+	.tileInfo{
+		position: absolute;
+		bottom: 20px;
+		left: 30px;
+		z-index: 20;
+		width: 190px;
+	}
+
+	&:hover {
+		img {
+			@include transform(scale(1.3,1.3));
+		}
+
+		a {
+			opacity: 1;
+		}
 	}
 }

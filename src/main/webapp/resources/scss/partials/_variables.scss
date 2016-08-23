@@ -13,8 +13,10 @@ h1,h2,h3,h4,h5 {
 	padding: 0;
 	margin: 0;
 }
-a,a:hover,a:visited{
+a,a:hover,a:visited,
+a:focus{
 	text-decoration: none
+	outline: none;
 }
 p{
 	margin: 0;
@@ -188,4 +190,7 @@ h2 {
 }
 .iconL-shirwal {
 	background-position: -510px -200px;
+}
+.iconL-karvenagar {
+	background-position: 0 -300px;
 }
