@@ -18,7 +18,7 @@
 					<ul class="clearfix">
 						<li><a href="#about" title="">About Us</a></li>	
 						<li><a href="#whyus" title="">Why Bankon?</a></li>
-						<li><a href="#" title="">Projects</a></li>
+						<li><a href="#projects" title="">Projects</a></li>
 						<li class="hasSubMenu"><a href="#" title="">Services <i class="icon-down"></i></a>
 							<ul class="subMenu">
 								<li><a href="#customers">For Customers</a></li>
@@ -346,15 +346,21 @@
 
 		<!-- footer -->
 		<footer class="pageFooter">
-			<div class="container">
-				<p class=""><span>2016</span>&copy; Bankon Reality</p>
+			<div class="container clearfix">
+				<p class="copywriteText"><span>2016</span>&copy; Bankon Reality</p>
 				<div class="socialWrapper">
-					<a href="#"></a>
+					<a href="#" class="icon-social-fb"></a>
+					<a href="#" class="icon-social-youtube"></a>
+					<a href="#" class="icon-google"></a>
+					<a href="#" class="icon-linkedin"></a>
 				</div>
 			</div>
 		</footer>
 		<!-- end of footer -->
-
+		
+		<span class="scrollTop icon-scrolltop">
+			<i class="icon-scrollup"></i>
+		</span>
 		<script type="text/javascript" src="resources/js/vendor/jquery.min.js"></script>
 		<script type="text/javascript" src="resources/js/vendor/html5shiv.js"></script>
 		<script type="text/javascript" src="resources/js/custom.js"></script>

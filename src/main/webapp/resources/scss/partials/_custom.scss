@@ -8,7 +8,7 @@ body {
 	background: url("../images/logo.png") no-repeat;
 	background-size: cover;	
 	display: inline-block;
-	float: left;
+	float: left;	
 }
 
 .pageHeader {
@@ -546,6 +546,17 @@ body {
 		line-height: 18px;
 		color: #999999;
 		font-weight: 600;
+	}
+	.copywriteText{
+		float: left;
+	}
+	.socialWrapper {
+		float: right;
+		a {
+			margin: 0 0 0 10px;
+			float: left;			
+			@include transition(all 0.3s ease);
+		}
 	}
 }
 

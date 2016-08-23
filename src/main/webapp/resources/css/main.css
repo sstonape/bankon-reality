@@ -13,8 +13,10 @@ h1, h2, h3, h4, h5 {
   padding: 0;
   margin: 0; }
 
-a, a:hover, a:visited {
-  text-decoration: none; }
+a, a:hover, a:visited,
+a:focus {
+  text-decoration: none;
+  outline: none; }
 
 p {
   margin: 0;
@@ -60,7 +62,7 @@ h2 {
     font-size: 14px;
     padding: 0 5px;
     line-height: 24px;
-    color: #fff;
+    color: white;
     background: #666666;
     margin: 0 10px 10px 0; }
 
@@ -97,6 +99,76 @@ h2 {
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
   border-right: 8px solid blue; }
+
+.icon-scrolltop {
+  cursor: pointer;
+  width: 40px;
+  text-align: center;
+  line-height: 36px;
+  height: 40px;
+  border: 2px solid #666666;
+  background: white;
+  display: inline-block;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value*100)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+  .icon-scrolltop.active {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value*100)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+    background: #ffcc00; }
+    .icon-scrolltop.active:hover {
+      background: #666666;
+      border: 2px solid black; }
+
+.icon-scrollup {
+  width: 15px;
+  height: 10px;
+  background-position: 0 -200px; }
+
+.icon-social-fb {
+  width: 28px;
+  height: 28px;
+  background-position: 0 -85px; }
+  .icon-social-fb:hover {
+    background-position: -30px -85px; }
+
+.icon-social-youtube {
+  width: 28px;
+  height: 28px;
+  background-position: 0 -170px; }
+  .icon-social-youtube:hover {
+    background-position: -30px -170px; }
+
+.icon-google {
+  width: 28px;
+  height: 28px;
+  background-position: 0 -142px; }
+  .icon-google:hover {
+    background-position: -30px -142px; }
+
+.icon-linkedin {
+  width: 28px;
+  height: 28px;
+  background-position: 0 -112px; }
+  .icon-linkedin:hover {
+    background-position: -30px -112px; }
 
 /** location icon **/
 .iconL-shivajinagar {
@@ -211,7 +283,7 @@ body {
         left: 50%;
         display: none;
         margin-left: -4px;
-        border-bottom-color: #fff; }
+        border-bottom-color: white; }
     .pageMenu li.hasSubMenu:hover > a:after {
       display: block; }
     .pageMenu li.hasSubMenu:hover .subMenu {
@@ -221,7 +293,7 @@ body {
       top: 100%;
       z-index: 100;
       width: 175px;
-      border: 1px solid #000000;
+      border: 1px solid black;
       left: 0;
       display: none;
       -webkit-transition: all 0.5s ease;
@@ -230,7 +302,7 @@ body {
       -o-transition: all 0.5s ease;
       transition: all 0.5s ease; }
       .pageMenu li .subMenu li {
-        background: #fff;
+        background: white;
         display: block;
         float: none; }
         .pageMenu li .subMenu li:hover a {
@@ -245,12 +317,12 @@ body {
       left: 50%;
       margin-left: -130px;
       text-align: center;
-      background: #fff; }
+      background: white; }
       .pageMenu li .contactSubMenu .teleContact {
         margin-bottom: 16px; }
   .pageMenu > ul > li:hover > a {
     background: #111111;
-    color: #fff; }
+    color: white; }
 
 .bannerSection {
   height: 470px; }
@@ -264,8 +336,8 @@ body {
       bottom: 47px;
       left: 28px;
       padding: 18px 20px;
-      background: #000000;
-      color: #fff;
+      background: black;
+      color: white;
       width: 470px;
       text-transform: uppercase; }
 
@@ -282,7 +354,7 @@ body {
       margin-left: -40%;
       bottom: -3px;
       height: 3px;
-      background: #fff; }
+      background: white; }
 
 .aboutSection h2,
 .whybankon h2,
@@ -324,16 +396,13 @@ body {
     background-position: 0 -47px;
     right: 0;
     bottom: -15px; }
-
 .aboutSection p {
   font-size: 14px;
   line-height: 20px;
-  color: #fff;
+  color: white;
   text-align: center; }
-
 .aboutSection h2 {
-  color: #fff; }
-
+  color: white; }
 .aboutSection .sectionData {
   padding-bottom: 58px;
   background: #666666; }
@@ -343,11 +412,9 @@ body {
   color: #666666; }
   .whybankon h2 span:after {
     background: #666; }
-
 .whybankon .sectionData {
   padding-bottom: 58px;
-  background: #fff; }
-
+  background: white; }
 .whybankon .whyList {
   width: 780px;
   margin: 0 auto; }
@@ -379,7 +446,7 @@ body {
   .forCustomer .sectionData {
     position: relative; }
   .forCustomer h2 {
-    color: #fff;
+    color: white;
     position: absolute;
     top: 65px;
     left: 0;
@@ -422,12 +489,13 @@ body {
     .forCustomer .servicesList p {
       font-size: 12px;
       line-height: 22px;
-      color: #fff; }
+      color: white; }
+  .forCustomer .oneRoofList {
+    margin-top: 250px; }
 
 .process .sectionData {
-  background: #fff;
+  background: white;
   padding-bottom: 80px; }
-
 .process h2 {
   color: #666666; }
   .process h2 span:after {
@@ -478,7 +546,6 @@ body {
   padding-bottom: 65px;
   height: 670px;
   position: relative; }
-
 .locations h2 {
   margin-bottom: 20px;
   color: #666666; }
@@ -559,15 +626,26 @@ body {
     line-height: 18px;
     color: #999999;
     font-weight: 600; }
+  .pageFooter .copywriteText {
+    float: left; }
+  .pageFooter .socialWrapper {
+    float: right; }
+    .pageFooter .socialWrapper a {
+      margin: 0 0 0 10px;
+      float: left;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
 
 .ourProjects h2 {
   color: #666666;
   margin-bottom: 20px; }
   .ourProjects h2 span:after {
     background: #666666; }
-
 .ourProjects .sectionData {
-  background: #fff;
+  background: white;
   padding-bottom: 60px; }
 
 .projectsTypes {
@@ -596,7 +674,7 @@ body {
     line-height: 28px;
     margin-bottom: 20px; }
   .projectTypesTile p {
-    color: #fff;
+    color: white;
     font-size: 18px;
     line-height: 22px;
     min-height: 40px;
@@ -630,9 +708,13 @@ body {
 @media (min-width: 1200px) {
   .forCustomer .servicesList li {
     width: 225px; }
+
   .processType li.leadProcess {
     margin-left: 220px; }
   .processType li.campaign {
     margin-left: 110px; }
   .processType li.relationship {
-    margin-left: 155px; } }
+    margin-left: 155px; }
+
+  .forCustomer .oneRoofList {
+    margin-top: 185px; } }

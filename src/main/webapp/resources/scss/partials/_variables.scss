@@ -15,7 +15,7 @@ h1,h2,h3,h4,h5 {
 }
 a,a:hover,a:visited,
 a:focus{
-	text-decoration: none
+	text-decoration: none;
 	outline: none;
 }
 p{
@@ -127,6 +127,67 @@ h2 {
   border-right:8px solid blue; 
 }
 
+.icon-scrolltop {
+	cursor: pointer;
+	width: 40px;
+	text-align: center;
+	line-height: 36px;
+	height: 40px;
+	border: 2px solid $grey;
+	background: $white;
+	display: inline-block;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	@include border-radius(50%);
+	@include opacity(0);
+	@include transition(all 0.4s ease);
+	&.active {
+		@include opacity(1);
+		background: $yellow;
+		&:hover {
+			background: $grey;
+			border: 2px solid $black;			
+		}
+	}
+}
+.icon-scrollup {
+	width: 15px;
+	height: 10px;
+	background-position: 0 -200px;
+}
+.icon-social-fb {
+	width: 28px;
+	height: 28px;
+	background-position: 0 -85px;
+	&:hover {
+		background-position: -30px -85px;
+	}
+}
+.icon-social-youtube{
+	width: 28px;
+	height: 28px;
+	background-position: 0 -170px;
+	&:hover {
+		background-position: -30px -170px;
+	}
+}
+.icon-google{
+	width: 28px;
+	height: 28px;
+	background-position: 0 -142px;
+	&:hover {
+		background-position: -30px -142px;
+	}
+}
+.icon-linkedin{
+	width: 28px;
+	height: 28px;
+	background-position: 0 -112px;
+	&:hover {
+		background-position: -30px -112px;
+	}
+}
 /** location icon **/
 .iconL-shivajinagar {
 	background-position: 0 0;

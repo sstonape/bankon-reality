@@ -2,6 +2,7 @@ $(document).on("ready",function(){
 	_scrollToSection();
 	_submenuPosition();	
 	_windowScroll();
+	_scrollTopEvent();
 });
 
 /**
@@ -41,8 +42,25 @@ var _submenuPosition = function(){
  */
 var _windowScroll = function(){
 	var headerHt = $(".pageHeader").outerHeight();
+	var bannerHt = $(".bannerSection").outerHeight();
 	$(window).on("scroll",function(){
 		var bodyScroll = $("body").scrollTop();		
-		$(".pageHeader").toggleClass("fixedHeader",(bodyScroll > headerHt))
+		$(".pageHeader").toggleClass("fixedHeader",(bodyScroll > headerHt));
+		$(".icon-scrolltop").toggleClass("active",(bodyScroll > (headerHt+bannerHt)));
 	});
-}
+};
+
+/**
+ * function used to scroll to top of page
+ */
+var _scrolltop = function(){
+	$("html,body").animate({
+		scrollTop: 0
+	},1000);	
+};
+
+var _scrollTopEvent = function(){
+	$(document).on("click",".scrollTop",function(){
+		_scrolltop();
+	});
+};
