@@ -246,19 +246,42 @@ body {
   background: url("../images/logo.png") no-repeat;
   background-size: cover;
   display: inline-block;
-  float: left; }
+  float: left;
+  -webkit-transition: width 0.4s ease;
+  -moz-transition: width 0.4s ease;
+  -ms-transition: width 0.4s ease;
+  -o-transition: width 0.4s ease;
+  transition: width 0.4s ease; }
 
 .pageHeader {
   margin-bottom: 10px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+  .pageHeader.fixedHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 300;
+    border-bottom: 1px solid #666666; }
+    .pageHeader.fixedHeader .pageMenu {
+      margin-top: 10px; }
+    .pageHeader.fixedHeader .logo {
+      width: 60px;
+      height: 60px; }
 
 .pageMenu {
   float: right;
-  margin-top: 30px; }
+  margin-top: 30px;
+  -webkit-transition: margin 0.4s ease;
+  -moz-transition: margin 0.4s ease;
+  -ms-transition: margin 0.4s ease;
+  -o-transition: margin 0.4s ease;
+  transition: margin 0.4s ease; }
   .pageMenu li {
     float: left;
     position: relative; }
@@ -323,6 +346,9 @@ body {
   .pageMenu > ul > li:hover > a {
     background: #111111;
     color: white; }
+
+.fixedHeader .pageMenu li a {
+  font-size: 14px; }
 
 .bannerSection {
   height: 470px; }

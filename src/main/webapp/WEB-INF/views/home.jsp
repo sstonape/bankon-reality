@@ -26,6 +26,7 @@
 							</ul>
 						</li>
 						<li><a href="#process" title="">Process</a></li>
+						<li><a href="#location" title="">Location</a></li>
 						<li class="hasSubMenu">
 							<a href="#contact" title="">Contact Us</a>
 							<div class="subMenu contactSubMenu">
@@ -151,10 +152,10 @@
 		<section class="section forCustomer" id="customers">
 			<div class="container">
 				<div class="sectionData clearfix">
-					<h2><span>For Customers</span></h2>
+					<h2><span>Services</span></h2>
 					<div class="dispTable">
 						<div class="colLeft tCell">
-							<h3>Service under one roof</h3>
+							<h3>For Builders</h3>
 							<ul class="oneRoofList clearfix listBgGrey">
 								<li><span>Manage everything in one place</span></li>
 								<li><span>Take the burden of Manpower handling and manage 
@@ -178,7 +179,7 @@
 							</ul>
 						</div>
 						<div class="colRight tCell">
-							<h3>Services we provide</h3>
+							<h3>For Customers</h3>
 							<ul class="servicesList">
 								<li>
 									<h4>Sole <br/>Selling</h4>

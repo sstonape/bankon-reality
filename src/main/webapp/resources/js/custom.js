@@ -47,6 +47,7 @@ var _windowScroll = function(){
 		var bodyScroll = $("body").scrollTop();		
 		$(".pageHeader").toggleClass("fixedHeader",(bodyScroll > headerHt));
 		$(".icon-scrolltop").toggleClass("active",(bodyScroll > (headerHt+bannerHt)));
+		$(".pageHeader").toggleClass("fixedHeader",(bodyScroll > 0));
 	});
 };
 
