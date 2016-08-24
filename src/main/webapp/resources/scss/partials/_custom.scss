@@ -14,8 +14,12 @@ body {
 
 .pageHeader {
 	margin-bottom: 10px;
-	@include transition(all 0.4s ease);	
-	&.fixedHeader {
+	@include transition(all 0.4s ease);		
+}
+
+.fixedHeader {
+	padding-top: 60px;
+	.pageHeader{
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -31,9 +35,8 @@ body {
 			width: 60px;
 			height: 60px;
 		}
-	}
+	}		
 }
-
 .pageMenu {
 	float: right;
 	margin-top: 30px;
@@ -130,8 +133,11 @@ body {
 	}
 }
 
-.fixedHeader {
-	.pageMenu {
+.fixedHeader {	
+	.pageHeader {
+		border-bottom: 1px solid $grey;
+	}
+	.pageMenu {		
 		li a {
 			font-size: 14px;
 		}

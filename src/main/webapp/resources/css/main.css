@@ -258,16 +258,19 @@ body {
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease; }
-  .pageHeader.fixedHeader {
+
+.fixedHeader {
+  padding-top: 60px; }
+  .fixedHeader .pageHeader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: white;
     z-index: 300; }
-    .pageHeader.fixedHeader .pageMenu {
+    .fixedHeader .pageHeader .pageMenu {
       margin-top: 10px; }
-    .pageHeader.fixedHeader .logo {
+    .fixedHeader .pageHeader .logo {
       width: 60px;
       height: 60px; }
 
@@ -344,6 +347,8 @@ body {
     background: #111111;
     color: white; }
 
+.fixedHeader .pageHeader {
+  border-bottom: 1px solid #666666; }
 .fixedHeader .pageMenu li a {
   font-size: 14px; }
 

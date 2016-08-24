@@ -11,9 +11,10 @@ $(document).on("ready",function(){
 var _scrollToSection = function(){
 	$(document).on("click",".pageMenu li a",function(e){
 		e.preventDefault();
+		var headerHt = $(".pageHeader").outerHeight();
 		var eTarget = $(this).attr("href");
 		$("html,body").animate({
-				scrollTop: $(eTarget).offset().top
+				scrollTop: $(eTarget).offset().top - headerHt
 		},1000);		
 	});	
 };
@@ -44,10 +45,9 @@ var _windowScroll = function(){
 	var headerHt = $(".pageHeader").outerHeight();
 	var bannerHt = $(".bannerSection").outerHeight();
 	$(window).on("scroll",function(){
-		var bodyScroll = $("body").scrollTop();		
-		$(".pageHeader").toggleClass("fixedHeader",(bodyScroll > headerHt));
+		var bodyScroll = $("body").scrollTop();				
 		$(".icon-scrolltop").toggleClass("active",(bodyScroll > (headerHt+bannerHt)));
-		$(".pageHeader").toggleClass("fixedHeader",(bodyScroll > 0));
+		$("body").toggleClass("fixedHeader",(bodyScroll > 0));
 	});
 };
 
