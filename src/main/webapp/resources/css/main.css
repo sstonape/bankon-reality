@@ -106,7 +106,6 @@ h2 {
   text-align: center;
   line-height: 36px;
   height: 40px;
-  border: 2px solid #666666;
   background: white;
   display: inline-block;
   position: fixed;
@@ -132,10 +131,9 @@ h2 {
     -moz-opacity: 1;
     -khtml-opacity: 1;
     opacity: 1;
-    background: #ffcc00; }
+    background: #666666; }
     .icon-scrolltop.active:hover {
-      background: #666666;
-      border: 2px solid black; }
+      background: #ffcc00; }
 
 .icon-scrollup {
   width: 15px;
@@ -266,8 +264,7 @@ body {
     left: 0;
     width: 100%;
     background: white;
-    z-index: 300;
-    border-bottom: 1px solid #666666; }
+    z-index: 300; }
     .pageHeader.fixedHeader .pageMenu {
       margin-top: 10px; }
     .pageHeader.fixedHeader .logo {
@@ -316,7 +313,7 @@ body {
       top: 100%;
       z-index: 100;
       width: 175px;
-      border: 1px solid black;
+      border: 1px solid #666666;
       left: 0;
       display: none;
       -webkit-transition: all 0.5s ease;
