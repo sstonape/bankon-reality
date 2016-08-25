@@ -349,8 +349,10 @@ body {
 
 .fixedHeader .pageHeader {
   border-bottom: 1px solid #666666; }
-.fixedHeader .pageMenu li a {
-  font-size: 14px; }
+.fixedHeader .pageMenu {
+  margin-top: 18px; }
+  .fixedHeader .pageMenu li a {
+    font-size: 14px; }
 
 .bannerSection {
   height: 470px; }
@@ -746,3 +748,91 @@ body {
 
   .forCustomer .oneRoofList {
     margin-top: 185px; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  h2 {
+    font-size: 24px; }
+
+  .logo {
+    width: 80px;
+    height: 80px; }
+
+  .pageMenu {
+    margin-top: 20px; }
+    .pageMenu li a {
+      font-size: 14px;
+      padding: 10px 8px; }
+
+  .bannerSection {
+    height: 340px; }
+    .bannerSection .banner {
+      height: 340px; }
+      .bannerSection .banner .bannerInfo {
+        padding: 15px;
+        bottom: 20px;
+        left: 20px; }
+        .bannerSection .banner .bannerInfo h2 {
+          font-size: 24px;
+          line-height: 28px; }
+
+  .aboutSection blockquote {
+    width: 410px;
+    font-size: 16px; }
+
+  .whybankon .whyList {
+    width: 620px; }
+    .whybankon .whyList li {
+      width: 300px; }
+      .whybankon .whyList li p {
+        margin-left: 60px; }
+    .whybankon .whyList .count {
+      width: 60px;
+      font-size: 60px; }
+    .whybankon .whyList .count3 {
+      margin-left: 190px;
+      margin-bottom: 20px; }
+
+  .projectsTypes {
+    width: 620px; }
+    .projectsTypes .projectTypesTile {
+      width: 300px; }
+
+  .forCustomer .colLeft,
+  .forCustomer .colRight {
+    padding: 125px 20px 20px 20px; }
+  .forCustomer .servicesList li {
+    width: 145px;
+    float: none;
+    display: inline-block; }
+
+  .processType li h2 {
+    font-size: 24px; }
+  .processType li img {
+    max-width: 100%; }
+  .processType li.campaign {
+    width: 280px; }
+  .processType li.leadProcess {
+    width: 290px;
+    margin-top: 40px;
+    margin-bottom: 40px; }
+  .processType li.relationship {
+    width: 600px; }
+    .processType li.relationship h2 {
+      top: 70px; }
+
+  .locationList {
+    width: 700px; }
+    .locationList h3 {
+      margin-top: 0; }
+    .locationList .wakad {
+      left: 165px; }
+    .locationList .kharadi {
+      left: 275px; }
+    .locationList .warje {
+      top: 220px;
+      left: 215px; }
+    .locationList .pashansus {
+      left: 230px; }
+    .locationList .bhugaon {
+      top: 370px; }
+    .locationList .moshi {
+      right: 140px; } }

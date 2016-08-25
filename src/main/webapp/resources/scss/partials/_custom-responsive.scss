@@ -28,3 +28,149 @@
 		}
 	}
 }
+
+@media (min-width:768px) and (max-width: 991px)  {
+	h2 {
+		font-size: 24px;
+	}
+	
+	.logo {
+		width: 80px;
+		height: 80px;
+	}
+	
+	.pageMenu {
+		margin-top: 20px;
+		li {
+			a {
+				font-size: 14px;
+				padding: 10px 8px;
+			}
+		}
+	}
+	
+	
+	.bannerSection{
+		height: 340px; 
+		.banner {
+			height: 340px;		
+			.bannerInfo {
+				padding: 15px;
+				bottom: 20px;
+				left: 20px;
+				h2 {
+					font-size: 24px;
+					line-height: 28px;
+				}
+			}
+		}	
+	}
+	
+	.aboutSection{
+		 blockquote {
+		 	width: 410px;
+		 	font-size: 16px;
+		 }
+	}	
+	
+	.whybankon {
+		.whyList {
+			width: 620px;
+			
+			li {
+				width: 300px;
+				
+				p {
+					margin-left: 60px;
+				}
+			}
+			.count {
+				width: 60px;
+				font-size: 60px;
+			}
+			.count3 {
+				margin-left: 190px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	
+	.projectsTypes {
+		width: 620px;
+		
+		.projectTypesTile {
+			width: 300px
+		}
+	}
+	
+	.forCustomer{
+		.colLeft,
+		.colRight {
+			padding: 125px 20px 20px 20px
+		}
+		.servicesList{
+			li{
+				width: 145px;
+				float: none;
+				display: inline-block;
+			}
+		} 
+	}
+	
+	.process {
+		
+	}
+	
+	.processType{
+		li {
+			h2 {
+				font-size: 24px;
+			}
+			img {
+				max-width: 100%;
+			}
+			&.campaign {
+				width: 280px;
+			}
+			&.leadProcess {
+				width: 290px;
+				margin-top: 40px;
+				margin-bottom: 40px;
+			}
+			
+			&.relationship {
+				width: 600px;	
+				
+				h2 {
+					top: 70px;
+				}
+			}
+		}
+	}
+	 
+	.locationList{
+		width: 700px;
+		h3 {
+			margin-top: 0;
+		}
+		.wakad {
+			left: 165px;
+		}
+		.kharadi {
+			left: 275px;
+		}
+		.warje {
+			top: 220px;
+			left: 215px;
+		}
+		.pashansus {
+			left: 230px;
+		}
+		.bhugaon {
+			top: 370px;
+		}
+		.moshi {
+			right: 140px;
+		}
+	}
+}
