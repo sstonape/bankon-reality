@@ -95,10 +95,23 @@
 							<h2>We are team of experts from property and Realty Industry with more than 16 years of experience</h2>
 						</div>
 					</div>
+					<div class="slide">
+				    	<img src="resources/images/slide3.jpg" />
+						<div class="slideInfo">
+							<h2>We are team of experts from property and Realty Industry with more than 16 years of experience</h2>
+						</div>
+					</div>
+					<div class="slide">
+				    	<img src="resources/images/slide4.jpg" />
+						<div class="slideInfo">
+							<h2>We also design a specific, customized for the particular project and also overlook its proper and timely implementations</h2>
+						</div>
+					</div>
 					<div class="slideNav center">
 					    <a href=# id="prev" class="arrow prev"></a> 
 					    <a href=# id="next" class="arrow next"></a>
 					</div>
+					<div class="cycle-pager"></div>
 				</div>
 			</div>
 			
