@@ -452,7 +452,7 @@ body {
   left: 0;
   width: 100%;
   text-align: center;
-  z-index: 400; }
+  z-index: 250; }
   .heroSlider .cycle-pager span {
     font-size: 30px;
     line-height: 30px;

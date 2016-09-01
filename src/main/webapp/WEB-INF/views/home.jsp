@@ -40,7 +40,7 @@
 						<li class="hasSubMenu"><a href="#" title="">Services <i class="icon-down"></i></a>
 							<ul class="subMenu">
 								<li><a href="#customers">For Customers</a></li>
-								<li><a href="#">For Builders</a></li>
+								<li><a href="#customers">For Builders</a></li>
 							</ul>
 						</li>
 						<li><a href="#process" title="">Process</a></li>
@@ -104,7 +104,7 @@
 					<div class="slide">
 				    	<img src="resources/images/slide4.jpg" />
 						<div class="slideInfo">
-							<h2>We also design a specific, customized for the particular project and also overlook its proper and timely implementations</h2>
+							<h2>We also design a specific, customized for the particular project.</h2>
 						</div>
 					</div>
 					<div class="slideNav center">
