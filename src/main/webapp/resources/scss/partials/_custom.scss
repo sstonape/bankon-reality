@@ -84,9 +84,9 @@ body {
 		.subMenu {
 			position: absolute;
 			top: 100%;
-			z-index: 100;
+			z-index: 500;
 			width: 175px;
-			border: 1px solid $grey;
+			@include box-shadow(0 3px 5px rgba(0,0,0,0.3));
 			left: 0;
 			display: none;
 			@include transition(all 0.5s ease);
@@ -145,25 +145,79 @@ body {
 	}
 }
 
-.bannerSection{
-	height: 470px;
-	.banner {
-		height: 470px;
-		background: url("../images/banner.jpg") no-repeat;
-		background-size: cover;
-		position: relative;
-
-		.bannerInfo {
+.bannerSection{	
+	.slide {		
+		width: 100%;		
+		.slideInfo {
 			position: absolute;
-			bottom: 47px;
-			left: 28px;
+			bottom: 20px;
+			left: 20px;
 			padding: 18px 20px;
 			background: $black;
 			color: $white;
 			width: 470px;
 			text-transform: uppercase;
-		}
+		}		
+		img {
+			width: 100%;
+		}	
 	}
+}
+
+.heroSlider {
+	.arrow {
+			width: 30px;
+			height: 30px;
+			@include border-radius(50%);
+			@include transition(all 0.4s ease);
+			background: rgba(0,0,0,0.5);
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			margin-top: -15px;
+			z-index: 200;
+			&:after,
+			&:before {
+				content: "";
+				position: absolute;
+				display: inline-block;
+				width: 2px;
+				height: 10px;
+				top: 50%;
+				margin-top: -7px;
+				background: #fff;
+				left: 50%;
+				margin-left: -1px;
+			}
+					
+			&.prev {
+				left: 15px;
+				
+				&:after {
+					@include transform(rotate(-45deg));
+					margin-top: -2px;
+				}
+				&:before {
+					@include transform(rotate(45deg));
+					margin-top: -8px;					
+				}
+			}
+			&.next {
+				right: 15px;
+				&:after {
+					@include transform(rotate(45deg));
+					margin-top: -2px;
+				}
+				&:before {
+					@include transform(rotate(-45deg));
+					margin-top: -8px;					
+				}
+			}
+			
+			&:hover {
+				background: rgba(0,0,0,0.9);
+			}
+		}
 }
 
 .section{

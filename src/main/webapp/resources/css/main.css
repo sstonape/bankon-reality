@@ -314,9 +314,13 @@ body {
     .pageMenu li .subMenu {
       position: absolute;
       top: 100%;
-      z-index: 100;
+      z-index: 500;
       width: 175px;
-      border: 1px solid #666666;
+      -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+      -o-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+      -ms-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
       left: 0;
       display: none;
       -webkit-transition: all 0.5s ease;
@@ -354,22 +358,83 @@ body {
   .fixedHeader .pageMenu li a {
     font-size: 14px; }
 
-.bannerSection {
-  height: 470px; }
-  .bannerSection .banner {
-    height: 470px;
-    background: url("../images/banner.jpg") no-repeat;
-    background-size: cover;
-    position: relative; }
-    .bannerSection .banner .bannerInfo {
-      position: absolute;
-      bottom: 47px;
-      left: 28px;
-      padding: 18px 20px;
-      background: black;
-      color: white;
-      width: 470px;
-      text-transform: uppercase; }
+.bannerSection .slide {
+  width: 100%; }
+  .bannerSection .slide .slideInfo {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 18px 20px;
+    background: black;
+    color: white;
+    width: 470px;
+    text-transform: uppercase; }
+  .bannerSection .slide img {
+    width: 100%; }
+
+.heroSlider .arrow {
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  z-index: 200; }
+  .heroSlider .arrow:after, .heroSlider .arrow:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 2px;
+    height: 10px;
+    top: 50%;
+    margin-top: -7px;
+    background: #fff;
+    left: 50%;
+    margin-left: -1px; }
+  .heroSlider .arrow.prev {
+    left: 15px; }
+    .heroSlider .arrow.prev:after {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      margin-top: -2px; }
+    .heroSlider .arrow.prev:before {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      margin-top: -8px; }
+  .heroSlider .arrow.next {
+    right: 15px; }
+    .heroSlider .arrow.next:after {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      margin-top: -2px; }
+    .heroSlider .arrow.next:before {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      margin-top: -8px; }
+  .heroSlider .arrow:hover {
+    background: rgba(0, 0, 0, 0.9); }
 
 .section h2 {
   font-weight: 600; }
@@ -747,7 +812,12 @@ body {
     margin-left: 155px; }
 
   .forCustomer .oneRoofList {
-    margin-top: 185px; } }
+    margin-top: 185px; }
+
+  .bannerSection .slide {
+    width: 100%; }
+    .bannerSection .slide .slideInfo {
+      bottom: 45px; } }
 @media (min-width: 768px) and (max-width: 991px) {
   h2 {
     font-size: 24px; }

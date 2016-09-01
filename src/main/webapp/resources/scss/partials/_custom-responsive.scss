@@ -27,6 +27,16 @@
 			margin-top: 185px;
 		}
 	}
+	
+	.bannerSection{	
+		.slide {		
+			width: 100%;		
+			.slideInfo{
+				bottom: 45px;
+			}
+		}
+	}		
+		
 }
 
 @media (min-width:768px) and (max-width: 991px)  {

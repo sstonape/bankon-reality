@@ -3,8 +3,26 @@
 <!DOCTYPE html>
 <html nowrap="true" id="ng-app" ng-app="SynergyApp" ng-controller="AppController ">
 	<head>
-		<title>Bankon</title>
+		<title>Bankon Reality</title>
 		<meta chartset="utf-8">
+		<link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="57x57" href="resources/images/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="resources/images/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="resources/images/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="resources/images/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="resources/images/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="resources/images/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="resources/images/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="resources/images/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="resources/images/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="resources/images//android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="resources/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="resources/images/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="resources/images/favicon-16x16.png">
+		<link rel="manifest" href="resources/images/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="resources/images/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>	
 		<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css">	
 		<link rel="stylesheet" type="text/css" href="resources/css/main.css">
@@ -57,12 +75,33 @@
 		<!-- banner-->
 		<section class="section bannerSection">	
 			<div class="container">
-				<div class="banner">
-					<div class="bannerInfo">
-						<h2>We help builders and developers to sell their real estate projects faster in the competitive market. </h2>
+				<div class="heroSlider cycle-slideshow"
+				    data-cycle-fx="fade"
+				    data-cycle-pause-on-hover=true
+				    data-cycle-speed=1000
+				    data-cycle-slides="> .slide"
+				    data-cycle-prev="#prev"
+    				data-cycle-next="#next"
+				    >
+				    <div class="slide">
+				    	<img src="resources/images/banner.jpg" />
+						<div class="slideInfo">
+							<h2>We help builders and developers to sell their real estate projects faster in the competitive market. </h2>
+						</div>
+					</div>
+					<div class="slide">
+				    	<img src="resources/images/slide2.jpg" />
+						<div class="slideInfo">
+							<h2>We are team of experts from property and Realty Industry with more than 16 years of experience</h2>
+						</div>
+					</div>
+					<div class="slideNav center">
+					    <a href=# id="prev" class="arrow prev"></a> 
+					    <a href=# id="next" class="arrow next"></a>
 					</div>
 				</div>
 			</div>
+			
 		</section>
 		<!-- end of banner -->
 
@@ -364,6 +403,7 @@
 		</span>
 		<script type="text/javascript" src="resources/js/vendor/jquery.min.js"></script>
 		<script type="text/javascript" src="resources/js/vendor/html5shiv.js"></script>
+		<script type="text/javascript" src="resources/js/vendor/jquery.cycle2.js"></script>
 		<script type="text/javascript" src="resources/js/custom.js"></script>
 
 <%-- <!-- JAVASCRIPTS --> 
