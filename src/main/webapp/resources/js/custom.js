@@ -1,67 +1,38 @@
-$(document).on("ready",function(){
-	_scrollToSection();
-	_submenuPosition();	
-	_windowScroll();
-	_scrollTopEvent();
+$(document).on("ready",function(){  
+    _initSlider();
+    _showCount();
 });
-
 /**
- * page scroll to particular function
+ * Use to init slider 
  */
-var _scrollToSection = function(){
-	$(document).on("click",".pageMenu li a",function(e){
-		e.preventDefault();
-		var headerHt = $(".pageHeader").outerHeight();
-		var eTarget = $(this).attr("href");
-		$("html,body").animate({
-				scrollTop: $(eTarget).offset().top - headerHt
-		},1000);		
-	});	
+var _initSlider = function(){
+  $('.heroSlider').vegas({
+      overlay: true,
+      transition: 'blur', 
+      transitionDuration: 4000,
+      delay: 10000,
+      color: 'red',
+      animation: 'random',
+      animationDuration: 20000,
+      slides: [
+        { src: 'images/slide1.jpg' },
+        { src: 'images/slide2.jpg' },
+        { src: 'images/slide3.jpg' },
+        { src: 'images/slide4.jpg' }
+      ]
+    });
 };
-
-
 /**
- * Used to set header submenu position depending on available space
+ * Use to show countdown timeer
  */
-var _submenuPosition = function(){
-	$(document).on("mouseenter",".pageMenu > ul > li",function(e){
-		var wWidth = $(window).outerWidth();
-		var _parent = $(this);
-		var childMenu = $(this).find(".subMenu")[0];
-		if(childMenu){
-			var locChildMenu = $(childMenu).offset().left + $(childMenu).width();
-			if(locChildMenu > wWidth) {
-				$(childMenu).css("left", "auto");
-				$(childMenu).css("right","0");
-			}
-		}	
-	});
+var  _showCount = function(){
+    var deadline = '2016/12/03';
+    $(".remTime")
+      .countdown(deadline, function(event) {
+        $(this).find(".week").html(event.strftime('%W'));
+        $(this).find(".days").html(event.strftime('%D'));
+        $(this).find(".hr").html(event.strftime('%H'));
+        $(this).find(".min").html(event.strftime('%M'));
+        $(this).find(".sec").html(event.strftime('%S'));       
+    });   
 }
-
-/**
- * Used to set header menu position after scroll
- */
-var _windowScroll = function(){
-	var headerHt = $(".pageHeader").outerHeight();
-	var bannerHt = $(".bannerSection").outerHeight();
-	$(window).on("scroll",function(){
-		var bodyScroll = $("body").scrollTop();				
-		$(".icon-scrolltop").toggleClass("active",(bodyScroll > (headerHt+bannerHt)));
-		$("body").toggleClass("fixedHeader",(bodyScroll > 0));
-	});
-};
-
-/**
- * function used to scroll to top of page
- */
-var _scrolltop = function(){
-	$("html,body").animate({
-		scrollTop: 0
-	},1000);	
-};
-
-var _scrollTopEvent = function(){
-	$(document).on("click",".scrollTop",function(){
-		_scrolltop();
-	});
-};

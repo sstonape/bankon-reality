@@ -1,4 +1,4 @@
-package com.bankonreality;
+package com.mywedding;
 
 import java.io.Serializable;
 
